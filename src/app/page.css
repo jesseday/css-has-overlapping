@@ -1,3 +1,8 @@
+:root {
+  --color-yellow: yellow;
+  --color-lavender: lavender;
+  --color-orange: orange;
+}
 main {
   padding: 0 1rem;
   min-height: 100vh;
@@ -39,15 +44,15 @@ main {
 }
 
 .bg-yellow {
-  --section-color: yellow;
+  --section-color: var(--color-yellow);
 }
 
 .bg-lavender {
-  --section-color: lavender;
+  --section-color: var(--color-lavender);
 }
 
 .bg-orange {
-  --section-color: orange;
+  --section-color: var(--color-orange);
 }
 
 /**
@@ -59,7 +64,7 @@ main {
 .island:has(> .bg-yellow) + .island:has(> .component-section.overlapping),
 .bg-yellow + .island:has(> .component-section.overlapping),
 .bg-yellow + .component-section.overlapping {
-  --previous-section-background-color: yellow;
+  --previous-section-background-color: var(--color-yellow));
 }
 
 /**
@@ -72,33 +77,40 @@ main {
 .island:has(> .component-section.overlapping):has(+ .island > .bg-yellow),
 .component-section.overlapping:has(+ .island > .bg-yellow),
 .component-section.overlapping:has(+ .bg-yellow) {
-  --next-section-background-color: yellow;
+  --next-section-background-color: var(--color-yellow));
 }
 
+
+/**
+ * Lavender
+ */
 .island:has(> .bg-lavender) + .component-section.overlapping,
 .island:has(> .bg-lavender) + .island:has(> .component-section.overlapping),
 .bg-lavender + .island:has(.component-section.overlapping),
 .bg-lavender + .component-section.overlapping {
-  --previous-section-background-color: lavender;
+  --previous-section-background-color: var(--color-lavender);)
 }
 
 .island:has(.component-section.overlapping):has(+ .island > .bg-lavender),
 .island:has(.component-section.overlapping):has(+ .bg-lavender),
 .component-section.overlapping:has(+ .island > .bg-lavender)
 .component-section.overlapping:has(+ .bg-lavender) {
-  --next-section-background-color: lavender;
+  --next-section-background-color: var(--color-lavender);)
 }
 
+/**
+ * Orange
+ */
 .island:has(> .bg-orange) + .component-section.overlapping,
 .island:has(> .bg-orange) + .island:has(> .component-section.overlapping),
 .bg-orange + .island:has(.component-section.overlapping),
 .bg-orange + .component-section.overlapping {
-  --previous-section-background-color: orange;
+  --previous-section-background-color: var(--color-orange);)
 }
 
 .island:has(.component-section.overlapping):has(+ .island > .bg-orange),
 .island:has(.component-section.overlapping):has(+ .bg-orange),
 .component-section.overlapping:has(+ .island > .bg-orange)
 .component-section.overlapping:has(+ .bg-orange) {
-  --next-section-background-color: orange;
+  --next-section-background-color: var(--color-orange);)
 }
