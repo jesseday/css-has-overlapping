@@ -10,7 +10,7 @@ export default function Home() {
         <Hero color="bg-orange" />
       </div>
       <div className="island">
-        <Panel color="bg-yellow" overlap={true} />
+        <Panel color="bg-yellow" overlap="fancy" />
       </div>
       <div className="island">
         <Section color="bg-lavender" />
