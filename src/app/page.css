@@ -64,7 +64,7 @@ main {
 .island:has(> .bg-yellow) + .island:has(> .component-section.overlapping),
 .bg-yellow + .island:has(> .component-section.overlapping),
 .bg-yellow + .component-section.overlapping {
-  --previous-section-background-color: var(--color-yellow));
+  --previous-section-background-color: var(--color-yellow);
 }
 
 /**
@@ -77,7 +77,7 @@ main {
 .island:has(> .component-section.overlapping):has(+ .island > .bg-yellow),
 .component-section.overlapping:has(+ .island > .bg-yellow),
 .component-section.overlapping:has(+ .bg-yellow) {
-  --next-section-background-color: var(--color-yellow));
+  --next-section-background-color: var(--color-yellow);
 }
 
 
@@ -88,14 +88,14 @@ main {
 .island:has(> .bg-lavender) + .island:has(> .component-section.overlapping),
 .bg-lavender + .island:has(.component-section.overlapping),
 .bg-lavender + .component-section.overlapping {
-  --previous-section-background-color: var(--color-lavender);)
+  --previous-section-background-color: var(--color-lavender);
 }
 
 .island:has(.component-section.overlapping):has(+ .island > .bg-lavender),
 .island:has(.component-section.overlapping):has(+ .bg-lavender),
 .component-section.overlapping:has(+ .island > .bg-lavender)
 .component-section.overlapping:has(+ .bg-lavender) {
-  --next-section-background-color: var(--color-lavender);)
+  --next-section-background-color: var(--color-lavender);
 }
 
 /**
@@ -105,12 +105,12 @@ main {
 .island:has(> .bg-orange) + .island:has(> .component-section.overlapping),
 .bg-orange + .island:has(.component-section.overlapping),
 .bg-orange + .component-section.overlapping {
-  --previous-section-background-color: var(--color-orange);)
+  --previous-section-background-color: var(--color-orange);
 }
 
 .island:has(.component-section.overlapping):has(+ .island > .bg-orange),
 .island:has(.component-section.overlapping):has(+ .bg-orange),
 .component-section.overlapping:has(+ .island > .bg-orange)
 .component-section.overlapping:has(+ .bg-orange) {
-  --next-section-background-color: var(--color-orange);)
+  --next-section-background-color: var(--color-orange);
 }
