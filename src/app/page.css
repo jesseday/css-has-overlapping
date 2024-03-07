@@ -1,0 +1,68 @@
+main {
+  padding: 0 1rem;
+  min-height: 100vh;
+}
+
+.component-section + .island:has(.component-section.overlapping) .component-section:before,
+.component-section + .component-section.overlapping:before {
+  background: var(--previous-section-background-color);
+  content: '';
+  display: block;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% + 2rem);
+  margin: 0 -1rem;
+  z-index: -1;
+}
+
+.island:has(.component-section.overlapping):has(+ .component-section) .component-section.overlapping:after,
+.component-section.overlapping:has(+ .component-section):after {
+  background: var(--next-section-background-color);
+  content: '';
+  display: block;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% + 2rem);
+  margin: 0 -1rem;
+  z-index: -1;
+}
+
+.bg-yellow {
+  --section-color: yellow;
+}
+
+.bg-lavender {
+  --section-color: lavender;
+}
+
+.bg-orange {
+  --section-color: orange;
+}
+
+.bg-yellow + .island:has(.component-section.overlapping),
+.bg-yellow + .component-section.overlapping {
+  --previous-section-background-color: yellow;
+}
+
+.island:has(.component-section.overlapping):has(+ .bg-yellow),
+.island:has(.component-section.overlapping):has(+ .island .bg-yellow),
+.component-section.overlapping:has(+ .island .bg-yellow),
+.component-section.overlapping:has(+ .bg-yellow) {
+  --next-section-background-color: yellow;
+}
+
+.bg-lavender + .island:has(.component-section.overlapping),
+.bg-lavender + .component-section.overlapping {
+  --previous-section-background-color: lavender;
+}
+
+.island:has(.component-section.overlapping):has(+ .island .bg-lavender),
+.island:has(.component-section.overlapping):has(+ .bg-lavender),
+.component-section.overlapping:has(+ .island .bg-lavender)
+.component-section.overlapping:has(+ .bg-lavender) {
+  --next-section-background-color: lavender;
+}

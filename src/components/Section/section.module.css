@@ -1,0 +1,7 @@
+.section {
+  background: var(--section-color);
+  text-align: center;
+  padding: 120px 0;
+  width: calc(100% + 2rem);
+  margin: 0 -1rem;
+}

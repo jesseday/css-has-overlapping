@@ -1,0 +1,8 @@
+.panel {
+  background: var(--section-color, 'orange');
+  text-align: center;
+  border-radius: 24px;
+  padding: 120px 32px;
+  width: 100%;
+  position: relative;
+}

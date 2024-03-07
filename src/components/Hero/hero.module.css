@@ -1,0 +1,7 @@
+.hero {
+  background: var(--section-color);
+  padding: 240px;
+  margin: 0 -1rem;
+  text-align: center;
+  width: calc(100% + 2rem);
+}
