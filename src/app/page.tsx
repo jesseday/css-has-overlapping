@@ -7,11 +7,11 @@ import Section from "@/components/Section";
 export default function Home() {
   return (
     <main>
-      <Hero />
+      <Hero color="bg-orange" />
       <div className="island">
-        <Panel />
+        <Panel color="bg-yellow" overlap={true} />
       </div>
-      <Section />
+      <Section color="bg-lavender" />
     </main>
   );
 }
