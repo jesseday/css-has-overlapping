@@ -1,8 +1,7 @@
-import Image from "next/image";
-import "./page.css";
 import Hero from "@/components/Hero";
 import Panel from "@/components/Panel";
 import Section from "@/components/Section";
+import "./page.css";
 
 export default function Home() {
   return (
