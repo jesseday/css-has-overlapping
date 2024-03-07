@@ -6,11 +6,15 @@ import "./page.css";
 export default function Home() {
   return (
     <main>
-      <Hero color="bg-orange" />
+      <div className="island">
+        <Hero color="bg-orange" />
+      </div>
       <div className="island">
         <Panel color="bg-yellow" overlap={true} />
       </div>
-      <Section color="bg-lavender" />
+      <div className="island">
+        <Section color="bg-lavender" />
+      </div>
     </main>
   );
 }

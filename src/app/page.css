@@ -55,6 +55,8 @@ main {
  * Scoped to when only having direct children to avoid potential bugs with nested components.
  * This essentially discovers that the overlapping section follows a yellow section.
  */
+ .island:has(> .bg-yellow) + .component-section.overlapping,
+.island:has(> .bg-yellow) + .island:has(> .component-section.overlapping),
 .bg-yellow + .island:has(> .component-section.overlapping),
 .bg-yellow + .component-section.overlapping {
   --previous-section-background-color: yellow;
@@ -73,6 +75,8 @@ main {
   --next-section-background-color: yellow;
 }
 
+.island:has(> .bg-lavender) + .component-section.overlapping,
+.island:has(> .bg-lavender) + .island:has(> .component-section.overlapping),
 .bg-lavender + .island:has(.component-section.overlapping),
 .bg-lavender + .component-section.overlapping {
   --previous-section-background-color: lavender;
@@ -85,6 +89,8 @@ main {
   --next-section-background-color: lavender;
 }
 
+.island:has(> .bg-orange) + .component-section.overlapping,
+.island:has(> .bg-orange) + .island:has(> .component-section.overlapping),
 .bg-orange + .island:has(.component-section.overlapping),
 .bg-orange + .component-section.overlapping {
   --previous-section-background-color: orange;
