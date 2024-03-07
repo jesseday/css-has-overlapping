@@ -5,6 +5,7 @@ export default function Panel({color = 'bg-yellow', overlap = 'default' }: {colo
   return (
     <section className={clsx('component-section', color, {
       'overlapping': overlap,
+      [styles['fancy-overlap']]: overlap === 'fancy',
     })}>
       <div className={clsx(styles.panel, {
               [styles.overlap]: overlap === 'default',

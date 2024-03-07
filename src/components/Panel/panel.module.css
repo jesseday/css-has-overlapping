@@ -18,10 +18,11 @@
     margin: 0 auto;
     width: 90%;
   }
-  .fancy:before {
+
+  .fancy-overlap:before {
     height: 40%;
   }
-  .fancy:after {
+  .fancy-overlap:after {
     height: 60%;
   }
 }
